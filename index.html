@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户评论</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        #comment-section {
+            max-width: 600px;
+            width: 100%;
+            background-color: #fff;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+        }
+
+        #comment-form {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+
+        #comment-form textarea {
+            resize: none;
+            height: 100px;
+            margin-bottom: 10px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        #comment-form input[type="text"],
+        #comment-form input[type="email"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        #comment-form button {
+            background-color: #2196F3;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .comment {
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
+            margin-bottom: 10px;
+        }
+
+        .comment:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .comment strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="comment-section">
+        <h2>用户评论</h2>
+
+        <div class="comment">
+            <strong>沃尔ui阿克苏的人头发规划局</strong>
+            <p>阿斯匹哦的房间安排送的购房价款</p>
+        </div>
+
+        <div class="comment">
+            <strong>安慰茸尕为偶然的根据发</strong>
+            <p>阿娥鲁嘎v啊就是可耻的父亲偶派为人豪爽给v</p>
+        </div>
+
+        <div class="comment">
+            <strong>阿文iu大哥v</strong>
+            <p>奥微软的股票v扶持哦大盘开始</p>
+        </div>
+
+        <div id="comment-form">
+            <h3>发表评论</h3>
+            <textarea id="comment" placeholder="在这里输入您的评论" required></textarea>
+            <input type="text" id="username" placeholder="您的姓名" required>
+            <input type="email" id="email" placeholder="您的电子邮件" required>
+            <button onclick="submitComment()">提交评论</button>
+        </div>
+    </div>
+
+    <script>
+        function submitComment() {
+            var commentText = document.getElementById('comment').value;
+            var username = document.getElementById('username').value;
+            var email = document.getElementById('email').value;
+
+            if (commentText && username && email) {
+                var commentSection = document.getElementById('comment-section');
+
+                var commentDiv = document.createElement('div');
+                commentDiv.className = 'comment';
+
+                var strong = document.createElement('strong');
+                strong.appendChild(document.createTextNode(username));
+                commentDiv.appendChild(strong);
+
+                var paragraph = document.createElement('p');
+                paragraph.appendChild(document.createTextNode(commentText));
+                commentDiv.appendChild(paragraph);
+
+                commentSection.insertBefore(commentDiv, commentSection.childNodes[3]); // Insert before the form
+
+                // Clear form fields
+                document.getElementById('comment').value = '';
+                document.getElementById('username').value = '';
+                document.getElementById('email').value = '';
+            } else {
+                alert('请填写所有必填项！');
+            }
+        }
+    </script>
+
+</body>
+</html>
