@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    function on_off(type){
+        var btn = document.getElementsByClassName("btn-on")[0];
+        var circle = document.getElementsByClassName("btn-on-circle")[0];
+        var text = document.getElementsByClassName("btn-on-text")[0];
+
+        if(!type){
+        btn.style= "background-color: #ccc;"
+        circle.style="left: 40px;background-color: #888;box-shadow: 0 0 10px #888;";
+        text.style="right: 30px;color: #888;";
+        text.innerText="OFF";
+        } else {
+        btn.style= ""
+        circle.style="";
+        text.style="";
+        text.innerText="ON";
+        }
+        btn.setAttribute("onclick", "on_off(" + !type + ")"); // 修改状态
+    }
+    on_off(false)// 关闭按钮
+</script>
+    <style>
+        /* 开关按钮 */
+        .btn-on{
+            width: 60px;
+            height: 25px;
+            margin: 0 3px;
+            border-radius: 25px;
+            font-size: 14px;
+        }
+        .btn-on{
+            cursor: pointer;
+            position: relative;
+            border: 1px solid white;
+            background-color: #12B090;
+        }
+        .btn-on-circle{
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            top: 5px;
+            left: 5px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 50%;
+            box-shadow: 0 0 10px white;
+            transition: all .5s;
+        }
+        .btn-on-text{
+            position: absolute;
+            right: 10px;
+            line-height: 25px;
+            color: white;
+            transition: all .5s;
+        }
+        .bdy{
+            width: 1000px;
+            height: 500px;
+            background-image: url(tupian/ay.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+        .md{
+            width: 25%;
+            height: 30%;
+            border: 1px solid #00ffd9;
+            border-radius: 10px;
+            float: left;
+            margin: 2% 4%;
+            font-size: 20px;
+            font-weight: 800;
+        }
+        .kt{
+            width: 40%;
+            height: 50%;
+            float: left;
+            border: 1px solid #00ffd9;
+            border-radius: 10px;
+            margin: 0 4%;
+            font-size: 20px;
+            font-weight: 800;
+        }
+        .fs{
+            width: 40%;
+            height: 21%;
+            float: left;
+            border: 1px solid #00ffd9;
+            border-radius: 10px;
+            margin: 0 4%;
+            font-size: 20px;
+            font-weight: 800;
+        }
+        .kg{
+           width: 30%;
+           height: 100%;
+           float: right; 
+        }
+        .test{
+            font-size: 10px;
+        }
+        input{
+            height: 50%;
+            width: 50%;
+            border-radius: 10px;
+            float: right;
+            margin: 0 40%;
+            font-size: 30px;
+            background-color: transparent;
+            border-color: #00e1ff;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="bdy">
+        <div class="md">
+            <div style="width: 90%;height: 20%;margin: 10% 5%;">
+                 门禁
+                 <div class="kg">
+                    <div class="btn-on" onclick="on_off()">
+                    <span class="btn-on-circle"></span>
+                    <span class="btn-on-text">ON</span>
+                  </div>
+                </div>
+            </div>
+            <div style="width: 90%;height: 20%;margin: 10% 5%;">
+                灯光
+                <div class="kg">
+                   <div class="btn-on" onclick="on_off()">
+                   <span class="btn-on-circle"></span>
+                   <span class="btn-on-text">ON</span>
+                 </div>
+               </div>
+           </div>
+        </div>
+        <div class="md">
+            <div style="width: 90%;height: 20%;margin: 10% 5%;">
+                 窗户
+                 <div class="kg">
+                    <div class="btn-on" onclick="on_off()">
+                    <span class="btn-on-circle"></span>
+                    <span class="btn-on-text">ON</span>
+                  </div>
+                </div>
+            </div>
+            <div style="width: 90%;height: 20%;margin: 10% 5%;">
+                窗帘
+                <div class="kg">
+                   <div class="btn-on" onclick="on_off()">
+                   <span class="btn-on-circle"></span>
+                   <span class="btn-on-text">ON</span>
+                 </div>
+               </div>
+           </div>
+        </div>
+        <div class="md"><br><span>书桌电源</span> 
+            <div style="width: 90%;height: 20%;margin: 5% 5%;">
+                门禁
+                 <div class="kg">
+                    <div class="btn-on" onclick="on_off()">
+                    <span class="btn-on-circle"></span>
+                    <span class="btn-on-text">ON</span>
+                  </div>
+                </div>
+            </div>
+            <div style="width: 90%;height: 20%;margin: 5% 5%;">
+                灯光
+                <div class="kg">
+                   <div class="btn-on" onclick="on_off()">
+                   <span class="btn-on-circle"></span>
+                   <span class="btn-on-text">ON</span>
+                 </div>
+               </div>
+           </div>
+        </div>
+        <div class="kt">
+            <div style="width: 90%;height: 20%;margin: 5% 5%;"><span>空调</span>
+                开关
+                <div class="kg">
+                   <div class="btn-on" onclick="on_off()">
+                   <span class="btn-on-circle"></span>
+                   <span class="btn-on-text">ON</span>
+                 </div>
+               </div>
+           </div>
+           <div style="width: 90%;height: 20%;margin: 5% 5%;"><span>空调</span>
+            温度
+                <div class="kg">
+                    <input type="text">
+                </div>
+            </div>
+            <div style="width: 90%;height: 20%;margin: 5% 5%;"><span>空调</span>
+                风速
+                    <div class="kg">
+                        <input type="text">
+                    </div>
+                </div>
+        </div>
+        <div class="fs"></div>
+        <div class="fs" style="margin: 3% 4%;"></div>
+    </div>
+    
+
+
+
+
+   <!-- 开关按钮 -->
+kanguan<div class="btn-on" onclick="on_off()" >
+  <!-- 圆点 -->
+  <span class="btn-on-circle"></span>
+  <!-- 文字 -->
+  <span class="btn-on-text">ON</span>
+</div>
+
+
+
+<style>
+  
+</style>
+ 
+</body>
+</html>
