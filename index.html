@@ -1,130 +1,67 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <meta content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width" />  -->
-    <link rel="icon" type="image/png" href="img/favicon.ico" /> 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
-    <title>爱情浪漫表白甜蜜时刻 - xcLeigh</title>
-    <script src="js/jquery.js"></script>
-    <script src="js/index.js"></script>
-    <link rel="stylesheet" href="css/index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人网页</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0b0c10;
+            color: #66fcf1;
+            margin: 0;
+            padding: 20px;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+        }
+        .tool {
+            margin: 15px 0;
+            padding: 10px;
+            border: 1px solid #66fcf1;
+            border-radius: 5px;
+        }
+        a {
+            color: #45a29e;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-<div id="box" oncontextmenu="return false;" onselectstart="return false;" unselectable="on" ondragstart="return false;">
-    <!-- 第一页 -->
-    <div class="header">
-        <div class="headerBg"></div>
-        <span class="logo">爱情浪漫表白甜蜜时刻</span>
-        <div class="play" title="点击播放，爱情浪漫表白甜蜜时刻">
-            <img src="img/play.png" alt="">
+    <div class="container">
+        <h1>欢迎来到我的个人网页</h1>
+        <h2>作品集</h2>
+        <p>这是我的安全工具分享：</p>
+        
+        <div class="tool">
+            <h3>工具名称 1</h3>
+            <p>工具描述 1</p>
+            <a href="链接1" target="_blank">查看工具</a>
         </div>
-        <div class="video">
-            <div class="video-box">
-                <video controls  src="img/loveyou1.mp4"></video>
-            </div>
+        
+        <div class="tool">
+            <h3>工具名称 2</h3>
+            <p>工具描述 2</p>
+            <a href="链接2" target="_blank">查看工具</a>
         </div>
-        <div class="scroll">
-            <img src="img/scroll.png" alt="">
+
+        <div class="tool">
+            <h3>工具名称 3</h3>
+            <p>工具描述 3</p>
+            <a href="链接3" target="_blank">查看工具</a>
         </div>
+
+        <!-- 可以继续添加更多工具 -->
     </div>
-
-    <!-- 第二页- 缘分相识 -->
-    <main class="main">
-        <div class="new-monster">
-            <div class="headerBg"></div>
-            <div class="monster-info">
-                <div class="monster-video">
-                    <div class="monster-video-box">
-                        <video id="play2" loop autoplay muted src="./img/loveyou4.mp4"></video>
-                        <div class="info1">
-                            <div>缘分相识</div>
-                            <div class="info1div">&nbsp;&nbsp;&nbsp;&nbsp;有缘相识是一种闪光的美丽,可以相处是一种温馨的快乐,能够相知是一种永恒的珍贵,友谊的接受是用整个心灵去体验,愿缘分的天空明亮长久。</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="more-activity">
-            <div class="headerBg"></div>
-            <div class="activity-wrap">
-                <div class="activity-title">
-                    <img src="img/activity1.png" alt="">
-                    <img src="img/hactivity1.png" alt="">
-                </div>
-                <div class="activity-content"></div>
-                <div class="activity-title">
-                    <img src="img/activity2.png" alt="">
-                    <img src="img/hactivity2.png" alt="">
-                </div>
-                <div class="activity-content"></div>
-                <div class="activity-title">
-                    <img src="img/activity3.png" alt="">
-                    <img src="img/hactivity3.png" alt="">
-                </div>
-                <div class="activity-content"></div>
-            </div>
-        </div>
-        <div class="feature">
-            <div class="headerBg"></div>
-            <div class="feature-wrap">
-                <div class=" swipe1"></div>
-                <div class=" swipe2"></div>
-                <div class=" swipe3"></div>
-                <div class=" swipe4"></div>
-                <div class=" swipe5"></div>
-                <div class=" swipe6"></div>
-            </div>
-            <div class="turn">
-                <div class="prev">
-                    <img src="img/left1.png" alt="">
-                    <img src="img/left.png" alt="">
-                </div>
-                <div class="next">
-                    <img src="img/right1.png" alt="">
-                    <img src="img/right.png" alt="">
-                </div>
-            </div>
-            <ul class="swipe-index">
-                <li>
-                    <img src="img/hswiper.png" alt="">
-                    <img src="img/hswipeindex.png" alt="">
-                </li>
-                <li>
-                    <img src="img/hswiper.png" alt="">
-                    <img src="img/hswipeindex.png" alt="">
-                </li>
-                <li>
-                    <img src="img/hswiper.png" alt="">
-                    <img src="img/hswipeindex.png" alt="">
-                </li>
-                <li>
-                    <img src="img/hswiper.png" alt="">
-                    <img src="img/hswipeindex.png" alt="">
-                </li>
-                <li>
-                    <img src="img/hswiper.png" alt="">
-                    <img src="img/hswipeindex.png" alt="">
-                </li>
-                <li>
-                    <img src="img/hswiper.png" alt="">
-                    <img src="img/hswipeindex.png" alt="">
-                </li>
-            </ul>
-            <div class="focus">
-               
-            </div>
-            <div class="decorate">
-                <div class="three-worlds">甜蜜时刻</div>
-                <div class="fontinfo">两人比肩站立,一起分担生活中的苦难,共享爱情的甜蜜。没有一方的卑微付出,也没有另一方的委曲求全。</div>
-            </div>
-        </div>
-        <ul id="sectionIndex">
-            <div></div>
-        </ul>
-    </main>
-</div>
-
 </body>
 </html>
